@@ -1,7 +1,8 @@
+const {API_TOKEN} = require('./config');
 const logger = require('./logger');
 
 function validateBearerToken(req, res, next) {
-    const apiToken = process.env.API_TOKEN;
+    const apiToken = API_TOKEN;
     console.log(apiToken);
     const authToken = req.get('Authorization');
     console.log(authToken);
